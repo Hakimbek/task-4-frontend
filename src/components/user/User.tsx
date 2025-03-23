@@ -87,7 +87,7 @@ const User = () => {
                 <tbody>
                 {
                     users
-                        .sort((a, b) => new Date(a.lastLoginTime).getTime() - new Date(b.lastLoginTime).getTime())
+                        .sort((a, b) => new Date(b.lastLoginTime).getTime() - new Date(a.lastLoginTime).getTime())
                         .map(({ id, email, username, lastLoginTime, isActive, isChecked }: User) => (
                             <UserItem
                                 key={id}
